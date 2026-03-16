@@ -5,13 +5,13 @@ const router = express.Router();
 const motos = [];
 
 router.get('/', async (request,response) => {
-    const result = await db.query('SELECT * FROM motos');
-    response.status(200).json(result.rows);
+    const resultado = await db.query('SELECT * FROM motos');
+    response.status(200).json(resultado.rows);
 });
 
 router.get('/:id', async (request,response) => {
-    const result = await db.query('SELECT * FROM motos WHERE id = $1', [request.params.id]);
-    response.status(200).json(result.rows[0])
+    const resultado = await db.query('SELECT * FROM motos WHERE id = $1', [request.params.id]);
+    response.status(200).json(resultado.rows[0])
 });
 
 router.post('/', async (request,response) => {
