@@ -3,7 +3,7 @@ node_modules/
 
 # Variáveis de ambiente e configurações sensíveis
 .env
-src/db/connection.js
+db/connection.js
 
 # Logs
 logs/
