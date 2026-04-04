@@ -15,7 +15,7 @@ router.get('/:id', async (request,response) => {
 });
 
 router.post('/', async (request,response) => {
-    const { nome, cpf, telefone } = request.body;
+    const {nome, cpf, telefone} = request.body;
     await db.query('INSERT INTO usuarios (nome, cpf, telefone) VALUES ($1, $2, $3)', [nome, cpf, telefone]);
     response.status(201).send('Usuário Cadastrado')
 });
